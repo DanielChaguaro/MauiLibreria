@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiLibreria.ListaLibrosPage"
+             Title="ListaLibrosPage">
+    <VerticalStackLayout>
+        <HorizontalStackLayout
+        BackgroundColor="DarkBlue">
+            <Button Text="Realizar Prestamo"
+            Clicked="OnClickPrestamo"/>
+                <Image
+            Source="dotnet_bot.png"
+            HeightRequest="50"
+            WidthRequest="100"
+            />
+            <Label 
+            Text="Libros"
+            FontSize="30"
+            TextColor="White"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        </HorizontalStackLayout>
+
+        <ListView x:Name="listaLibros"
+              RowHeight="80" ItemSelected="OnClickShowDetail">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="dotnet_bot.png"
+                               HeightRequest="50"
+                               WidthRequest="100"/>
+                            <StackLayout Orientation="Vertical">
+                                <Label
+                                Text="{Binding Nombre}"
+                                VerticalOptions="Start"
+                                FontSize="20"/>
+                                <Label
+                                Text="{Binding Autor}"
+                                VerticalOptions="End"
+                                FontSize="20"/>
+                            </StackLayout>
+                        </StackLayout>
+
+                    </ViewCell>
+
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+
+        </ListView>
+
+    </VerticalStackLayout>
+</ContentPage>

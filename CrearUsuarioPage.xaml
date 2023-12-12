@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiLibreria.CrearUsuarioPage"
+             Title="CrearUsuarioPage">
+    <VerticalStackLayout>
+        <Label 
+            Text="Crear usuario"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <TableView>
+            <TableRoot>
+                <TableSection Title="Crear Usuario">
+                    <EntryCell x:Name="Nombre"
+                    Placeholder="Nombre"/>
+                    <EntryCell x:Name="Apellido"
+                    Placeholder="Apellido"/>
+                    <EntryCell x:Name="Usuario"
+                   Placeholder="Usuario"/>
+                    <EntryCell x:Name="Contrasena"
+                   Placeholder="Contrasena"/>
+
+
+                </TableSection>
+            </TableRoot>
+        </TableView>
+        <Button Text="Crear Usuario"
+    Clicked="OnClickCrearUsuario"/>
+    </VerticalStackLayout>
+</ContentPage>
