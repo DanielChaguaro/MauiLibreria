@@ -28,8 +28,11 @@ public partial class ListaLibrosPage : ContentPage
             BindingContext = libro,
         });
     }
-    private async void OnClickPrestamo(object sender, SelectedItemChangedEventArgs e)
+
+        private async void OnClickPrestamoP(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new PrestamosPage(_ApiService));
+        
     }
+    
 }

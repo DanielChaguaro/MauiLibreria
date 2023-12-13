@@ -1,13 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiLibreria.MainPage">
+             x:Class="MauiLibreria.MainPage" Title="Login">
+   
     <VerticalStackLayout>
         <TableView>
             <TableRoot>
-                <TableSection Title="Login">
-                    <EntryCell x:Name="Usuario"
+                <TableSection >
+                    <TextCell Text="Usuario"/>
+                    <EntryCell
+                                   x:Name="Usuario"
                            Placeholder="Usuario"/>
+                    <TextCell Text="Contrasena"/>
                     <EntryCell x:Name="Contrasena"
                            Placeholder="Contrasena"/>
                     

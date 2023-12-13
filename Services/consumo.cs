@@ -7,7 +7,7 @@ namespace MauiLibreria.Services
 {
     public class consumo : Iconsumo
     {
-        private static string _baseUrl = "http://10.0.2.2:5218/";
+        private static string _baseUrl = "https://apilibros20231212180451.azurewebsites.net/";
 
         public consumo()
         {

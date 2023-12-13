@@ -27,11 +27,11 @@
                 FontSize="18"/>
         </StackLayout>
         <Button Text="Regresar"
-    Clicked="ClickRegresarMain"
-    FontSize="20"
-    Margin="5"
-    HorizontalOptions="FillAndExpand"
-    BackgroundColor="Red"/>
+        Clicked="OnClickRegresarMain"
+        FontSize="20"
+        Margin="5"
+        HorizontalOptions="FillAndExpand"
+        BackgroundColor="Red"/>
 
     </VerticalStackLayout>
 </ContentPage>

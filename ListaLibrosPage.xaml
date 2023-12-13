@@ -2,21 +2,20 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiLibreria.ListaLibrosPage"
-             Title="ListaLibrosPage">
+             Title="Libreria Odisea">
     <VerticalStackLayout>
         <HorizontalStackLayout
-        BackgroundColor="DarkBlue">
-            <Button Text="Realizar Prestamo"
-            Clicked="OnClickPrestamo"/>
-                <Image
-            Source="dotnet_bot.png"
+        BackgroundColor="#d9d9d9">
+
+            <Image
+            Source="https://jumpseller.s3.eu-west-1.amazonaws.com/store/libreria-odisea1/assets/Logotipo_ODISEA.png"
             HeightRequest="50"
             WidthRequest="100"
             />
             <Label 
             Text="Libros"
             FontSize="30"
-            TextColor="White"
+            TextColor="Black"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
         </HorizontalStackLayout>
@@ -26,19 +25,46 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Orientation="Horizontal">
-                            <Image Source="dotnet_bot.png"
-                               HeightRequest="50"
-                               WidthRequest="100"/>
+                        <StackLayout Orientation="Horizontal" BackgroundColor="#001a1a">
+                            
                             <StackLayout Orientation="Vertical">
                                 <Label
                                 Text="{Binding Nombre}"
+                                    TextColor="White"
                                 VerticalOptions="Start"
+                                    
                                 FontSize="20"/>
                                 <Label
                                 Text="{Binding Autor}"
+                                    TextColor="White"
                                 VerticalOptions="End"
                                 FontSize="20"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Vertical" HorizontalOptions="EndAndExpand">
+
+                                <Label
+                                    Text="Cantidad: "
+                                    TextColor="White"
+                                    VerticalOptions="Start"
+                                    FontSize="20"/>
+                                <Label
+                                    Text="Precio: "
+                                    TextColor="White"
+                                    VerticalOptions="End"
+                                    FontSize="20"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Vertical" HorizontalOptions="End">
+                          
+                                <Label
+                                    Text="{Binding Cantidad}"
+                                    TextColor="White"
+                                    VerticalOptions="Start"
+                                    FontSize="20"/>
+                                <Label
+                                    Text="{Binding Precio}"
+                                    TextColor="White"
+                                    VerticalOptions="End"
+                                    FontSize="20"/>
                             </StackLayout>
                         </StackLayout>
 
@@ -49,6 +75,8 @@
 
 
         </ListView>
-
+        <Button Text="Realizar Prestamo" 
+                Clicked="OnClickPrestamoP"/>
+        
     </VerticalStackLayout>
 </ContentPage>
