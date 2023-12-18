@@ -23,11 +23,11 @@
             Clicked="OnClickIniciarSesion"/>
         <Label 
             Text="No tiene cuenta"
-            FontSize="30"
+            FontSize="20"
             TextColor="White"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-        <Button Text="Crear sesion"
+        <Button Text="Crear Usuario"
         Clicked="OnClickCrearSesion"/>
 
     </VerticalStackLayout>

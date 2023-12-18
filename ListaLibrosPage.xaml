@@ -26,8 +26,18 @@
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal" BackgroundColor="#001a1a">
-                            
+                            <Label
+                            Text="Id: "
+                            TextColor="White"
+                            VerticalOptions="Start"
+                            FontSize="20"/>
                             <StackLayout Orientation="Vertical">
+                                
+                                <Label
+                                    Text="{Binding IdLibro}"
+                                    TextColor="White"
+                                    VerticalOptions="Start"
+                                    FontSize="20"/>
                                 <Label
                                 Text="{Binding Nombre}"
                                     TextColor="White"
